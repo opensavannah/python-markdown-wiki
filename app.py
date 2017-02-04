@@ -75,7 +75,7 @@ def index():
         return redirect(
             url_for('topic', topic=Topic.find(request.args['topic']))
         )
-    return redirect(url_for('topic', topic=Topic.find('README')))
+    return redirect(url_for('topic', topic=Topic.find('Open Savannah Docs')))
 
 
 @app.route("/<Topic:topic>", methods=["GET", "POST"])
