@@ -19,7 +19,7 @@
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header hidden-xs">
-          <a class="navbar-brand" href="{{ url_for('index') }}">Open Savannah Wiki</a>
+          <a class="navbar-brand" href="{{ url_for('index') }}">IdeaSAV</a>
         </div>
         <div class="pull-right">
           <form class="navbar-form" action="/" method="GET" role="search" style="border: 0;">
@@ -52,7 +52,7 @@
             {% set nav_items = [
               { 'title': 'Contents', 'url': url_for('topic', topic=topic) },
               { 'title': 'Backlinks', 'url': url_for('backlinks', topic=topic) },
-              { 'title': 'Keynote', 'url': url_for('keynote', topic=topic) },
+              { 'title': 'Presentation Mode', 'url': url_for('keynote', topic=topic) },
             ] %}
             {% for nav in nav_items -%}
               <li role="presentation" {% if request.path == nav['url'] %}class="active"{% endif %}>
